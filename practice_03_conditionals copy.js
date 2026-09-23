@@ -6,6 +6,9 @@
 // and check the console output against the expected results in the comments.
 // ==========================================================
 
+
+
+
 // ---------- Problem 1: Number Classifier ----------
 // Return a string describing num:
 //   "zero"            if num is 0
@@ -37,6 +40,14 @@ console.log(classifyNumber(7)); // "positive odd"
 console.log(classifyNumber(-4)); // "negative even"
 console.log(classifyNumber(-7)); // "negative odd" */
 
+
+
+
+
+
+
+
+
 // ---------- Problem 2: Grade Calculator ----------
 // Return the letter grade for score (0-100):
 //   90+     -> "A"
@@ -45,9 +56,9 @@ console.log(classifyNumber(-7)); // "negative odd" */
 //   60-69   -> "D"
 //   below 60 -> "F"
 // If score is less than 0 or greater than 100, return "Invalid score".
-function getLetterGrade(score) {
+/* function getLetterGrade(score) {
   // TODO: your code here
-  if (score >= 90) {
+  if (score >= 90 && score <101) {
     return("A") }
     else if (score >= 80 && score <=89) {
       return("B")}
@@ -55,8 +66,10 @@ function getLetterGrade(score) {
       return("C")}
       else if (score >= 60 && score <=69) {
       return("D")}
-      else if (score <60) {
+      else if (score <60 && score>-1) {
       return("F")}
+       else if (score < 0 || score> 100) {
+      return("Invalid score")}
 }
 
 console.log(getLetterGrade(95)); // "A"
@@ -64,21 +77,47 @@ console.log(getLetterGrade(82)); // "B"
 console.log(getLetterGrade(59)); // "F"
 console.log(getLetterGrade(-5)); // "Invalid score"
 console.log(getLetterGrade(150)); // "Invalid score"
+*/
+
+
+
+
+
 
 // ---------- Problem 3: FizzBuzz ----------
 // Return:
 //   "Fizz"     if num is divisible by 3
 //   "Buzz"     if num is divisible by 5
-/* //   "FizzBuzz" if num is divisible by both 3 and 5
+//  "FizzBuzz" if num is divisible by both 3 and 5
 //   otherwise, num converted to a string
-function fizzBuzz(num) {
+
+/* function fizzBuzz(num) {
   // TODO: your code here
+if (num%3 === 0 && num%5 === 0) {
+  return "FizzBuzz";
+}
+  else if (num%3 === 0) {
+  return "Fizz";
+}
+else if (num%5 === 0) {
+  return "Buzz";
+}
+else if (!num%5 === 0 && !num%3 === 0) {
+  return num;
+}
+
 }
 
 console.log(fizzBuzz(3)); // "Fizz"
 console.log(fizzBuzz(5)); // "Buzz"
 console.log(fizzBuzz(15)); // "FizzBuzz"
 console.log(fizzBuzz(7)); // "7"
+ */
+
+
+
+
+
 
 // ---------- Problem 4: Shipping Cost Calculator ----------
 // If isMember is true:
@@ -88,8 +127,27 @@ console.log(fizzBuzz(7)); // "7"
 //   weight <= 1  -> 5
 //   weight <= 5  -> 8
 //   weight > 5   -> 12
+
 function getShippingCost(weight, isMember) {
   // TODO: your code here (nested conditional — check isMember first, then weight)
+if (isMember === true && weight <= 5) {
+  return "0";
+}
+else if (isMember === true && weight > 5) {
+  return "3";
+}
+else if (weight <= 1) {
+  return "5";
+}
+else if (weight <= 1) {
+  return "5";
+}
+else if (weight <= 5) {
+  return "8";
+}
+else if (weight > 5) {
+  return "12";
+}
 }
 
 console.log(getShippingCost(3, true)); // 0
@@ -98,7 +156,10 @@ console.log(getShippingCost(0.5, false)); // 5
 console.log(getShippingCost(4, false)); // 8
 console.log(getShippingCost(10, false)); // 12
 
-// ---------- Stretch (optional) ----------
+
+
+
+/* // ---------- Stretch (optional) ----------
 // Rewrite the even/odd check from Problem 1 using the ternary operator
 // instead of if / else.
 function isEvenTernary(num) {
@@ -106,5 +167,4 @@ function isEvenTernary(num) {
 }
 
 console.log(isEvenTernary(4)); // true
-console.log(isEvenTernary(7)); // false
- */ */
+console.log(isEvenTernary(7)); // false*/
