@@ -91,7 +91,7 @@ console.log(getLetterGrade(150)); // "Invalid score"
 //  "FizzBuzz" if num is divisible by both 3 and 5
 //   otherwise, num converted to a string
 
-/* function fizzBuzz(num) {
+function fizzBuzz(num) {
   // TODO: your code here
 if (num%3 === 0 && num%5 === 0) {
   return "FizzBuzz";
@@ -102,8 +102,8 @@ if (num%3 === 0 && num%5 === 0) {
 else if (num%5 === 0) {
   return "Buzz";
 }
-else if (!num%5 === 0 && !num%3 === 0) {
-  return num;
+else {
+  return String(num)
 }
 
 }
@@ -112,7 +112,7 @@ console.log(fizzBuzz(3)); // "Fizz"
 console.log(fizzBuzz(5)); // "Buzz"
 console.log(fizzBuzz(15)); // "FizzBuzz"
 console.log(fizzBuzz(7)); // "7"
- */
+
 
 
 
@@ -128,7 +128,7 @@ console.log(fizzBuzz(7)); // "7"
 //   weight <= 5  -> 8
 //   weight > 5   -> 12
 
-function getShippingCost(weight, isMember) {
+/* function getShippingCost(weight, isMember) {
   // TODO: your code here (nested conditional — check isMember first, then weight)
 if (isMember === true && weight <= 5) {
   return "0";
@@ -156,10 +156,10 @@ console.log(getShippingCost(0.5, false)); // 5
 console.log(getShippingCost(4, false)); // 8
 console.log(getShippingCost(10, false)); // 12
 
+ */
 
 
-
-/* // ---------- Stretch (optional) ----------
+// ---------- Stretch (optional) ----------
 // Rewrite the even/odd check from Problem 1 using the ternary operator
 // instead of if / else.
 function isEvenTernary(num) {
